@@ -1,6 +1,8 @@
-import {StyledNavbar} from '../styling/StyledComponents'
 import React from 'react';
-
+import {StyledNavbar} from '../styling/StyledComponents'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' 
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+{/* <FontAwesomeIcon icon={faCoffee} /> */}
 function Navbar() {
   return (
     <StyledNavbar>
@@ -10,7 +12,7 @@ function Navbar() {
                     ChitraKala
                 </div>
                 <div className="searchBox">
-                    <i>icon</i>
+                    <FontAwesomeIcon icon={faSearch} />
                     <input placeholder="Search for movies"/>
                 </div>
             </div>

@@ -17,7 +17,7 @@ export const StyledNavbar = Styled.div`
             padding:5px;
             border-radius: 4px;
             font-size: 20px;
-            i{
+            svg{
                 margin: 0px 3px;
             }
             input{
