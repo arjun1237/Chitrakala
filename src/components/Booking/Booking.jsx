@@ -5,18 +5,26 @@ import DateTimeSelection from './DateTimeSelection'
 import SeatSelection from './SeatSelection'
 import ConformationPage from './ConformationPage'
 import SummaryPage from './SummaryPage'
+import {DataContext} from '../../context/DataContextProvider'
 
 export default class Booking extends Component{
     render(){
+        const {phase} = this.context
+        let phRender = <DateTimeSelection />
+        switch(phase){
+            case 2: phRender = <SeatSelection />
+                    break;
+            case 3: phRender = <ConformationPage />  
+                    break;
+            case 4: phRender = <SummaryPage />  
+                    break;
+        }
         return(
             <BookingContainer>
                 <div>
-                    <Phases />
-                    <PhaseBody> 
-                        <DateTimeSelection />
-                        {/* <SeatSelection /> */}
-                        {/* <ConformationPage />       */}
-                        {/* <SummaryPage />       */}
+                    <Phases phase={phase} />
+                    <PhaseBody>   
+                        {phRender}
                     </PhaseBody>                    
                 </div>
             </BookingContainer>
@@ -24,17 +32,19 @@ export default class Booking extends Component{
     }
 }
 
+Booking.contextType = DataContext
 
-function Phases(){
+
+function Phases({phase}){
     return(
         <PhaseHandler>
-            <PhaseBall bg={colors.themeSuccess} />
+            <PhaseBall bg={phase >= 1 && colors.themeSuccess} />
             <PhaseLine />
-            <PhaseBall />
+            <PhaseBall bg={phase >= 2 && colors.themeSuccess} />
             <PhaseLine />
-            <PhaseBall />
+            <PhaseBall bg={phase >= 3 && colors.themeSuccess} />
             <PhaseLine />
-            <PhaseBall />
+            <PhaseBall bg={phase >= 4 && colors.themeSuccess} />
         </PhaseHandler>
     )
 }
