@@ -1,0 +1,19 @@
+.data-handler{
+    display: flex;
+}
+
+.data-handler p{
+    margin: 0;
+    padding: 5px 10px;
+}
+
+.data-handler div{
+
+}
+
+.infobar{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between;
+}

@@ -49,6 +49,8 @@ export const StyledNavbar = Styled.div`
     }
     .logo{
             font-size : 25px;
+            font-family: 'Cookie', cursive;
+            font-size: 35px;
         }
 `;
 
