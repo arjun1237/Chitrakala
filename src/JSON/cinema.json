@@ -1,0 +1,97 @@
+[
+    {
+        "id" : 1,
+        "location" : "bangalore",
+        "theatre" : 1
+    },
+
+    {
+        "id" : 2,
+        "location" : "bangalore",
+        "theatre" : 2
+    },
+
+    {
+        "id" : 3,
+        "location" : "bangalore",
+        "theatre" : 3
+    },
+
+    {
+        "id" : 4,
+        "location" : "bangalore",
+        "theatre" : 4
+    },
+
+    {
+        "id" : 5,
+        "location" : "mumbai",
+        "theatre" : 1
+    },
+
+    {
+        "id" : 6,
+        "location" : "mumbai",
+        "theatre" : 2
+    },
+
+    {
+        "id" : 7,
+        "location" : "mumbai",
+        "theatre" : 3
+    },
+
+    {
+        "id" : 8,
+        "location" : "mumbai",
+        "theatre" : 4
+    },
+    
+    {
+        "id" : 9,
+        "location" : "hyderabad",
+        "theatre" : 1
+    },
+
+    {
+        "id" : 10,
+        "location" : "hyderabad",
+        "theatre" : 2
+    },
+
+    {
+        "id" : 11,
+        "location" : "hyderabad",
+        "theatre" : 3
+    },
+
+    {
+        "id" : 12,
+        "location" : "hyderabad",
+        "theatre" : 4
+    },
+    
+    {
+        "id" : 13,
+        "location" : "delhi",
+        "theatre" : 1
+    },
+
+    {
+        "id" : 14,
+        "location" : "delhi",
+        "theatre" : 2
+    },
+
+    {
+        "id" : 15,
+        "location" : "delhi",
+        "theatre" : 3
+    },
+
+    {
+        "id" : 16,
+        "location" : "delhi",
+        "theatre" : 4
+    }
+]
