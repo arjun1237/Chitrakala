@@ -7,7 +7,40 @@ export const  StyledLandingPage = Styled.div`
     margin: 10px auto;
     padding: 10px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    & > div{
+        margin: 15px;
+    }
 `
 export const StyledMovieCard = Styled.div`
-    background-color:white;
+    background-color:${color.bgWhite};
+    display:flex;
+    flex-direction: column;
+    .image{
+        height: 350px;
+        background-position: center;
+        background-size: contain;
+        box-shadow: 0px 80px 80px -80px #000 inset, 0px -80px 80px -80px #000 inset;
+    }
+    .content{
+        flex: 1;
+        padding: 7px;
+        .name{
+            font-size: 25px;
+            color:${color.textMain}
+        }
+        .language{
+            color:${color.textSecondary}
+        }
+        >*{
+            padding: 5px;
+        }
+    }
+    .bookButton{
+        color:${color.textWhite};
+        background: ${color.bgMain};
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 700;
+    }
 `
