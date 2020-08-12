@@ -3,6 +3,8 @@ import colors from '../../styling/theme'
 import styled from 'styled-components'
 import DateTimeSelection from './DateTimeSelection'
 import SeatSelection from './SeatSelection'
+import ConformationPage from './ConformationPage'
+import SummaryPage from './SummaryPage'
 
 export default class Booking extends Component{
     render(){
@@ -11,8 +13,10 @@ export default class Booking extends Component{
                 <div>
                     <Phases />
                     <PhaseBody> 
-                        {/* <DateTimeSelection /> */}
-                        <SeatSelection />
+                        <DateTimeSelection />
+                        {/* <SeatSelection /> */}
+                        {/* <ConformationPage />       */}
+                        {/* <SummaryPage />       */}
                     </PhaseBody>                    
                 </div>
             </BookingContainer>

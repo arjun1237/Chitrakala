@@ -42,6 +42,7 @@ export const StyledNavbar = Styled.div`
         & > div{
             opacity: 0.7;
             transition: all 0.5s;
+            cursor: pointer;
         }
         & > div:hover{
             opacity: 1;
@@ -51,6 +52,7 @@ export const StyledNavbar = Styled.div`
             font-size : 25px;
             font-family: 'Cookie', cursive;
             font-size: 35px;
+            cursor: pointer;
         }
 `;
 
