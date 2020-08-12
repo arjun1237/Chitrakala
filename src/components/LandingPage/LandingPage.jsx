@@ -1,5 +1,6 @@
 import React from "react";
 import MovieCard from "./MovieCard";
+import movieData from "../../JSON/movie.json"
 import { StyledLandingPage } from "../../styling/StyledLandingPageComponents";
 
 class LandingPage extends React.Component {
@@ -10,7 +11,11 @@ class LandingPage extends React.Component {
 	render() {
 		return (
 			<StyledLandingPage>
-				<MovieCard />
+				{
+                    movieData?.map(movie=>
+                        <MovieCard key={movie.id} data={movie}/>
+                        )
+                }
 			</StyledLandingPage>
 		);
 	}

@@ -13,6 +13,7 @@ const textWarning = themeWarning; //yellow
 const bgDark = "#212435"; //darkBlue
 const bgSecondary = "#f2f2f2"; //greyishBackground
 const bgWhite = "white";
+const bgMain = themeMain; //red
 const bgPrimary = themePrimary; //blue
 const bgSuccess = themeSuccess; //green
 const bgWarning = themeWarning; //yellow
@@ -33,7 +34,8 @@ const colors = {
 	bgWhite,
 	bgPrimary,
 	bgSuccess,
-	bgWarning,
+    bgWarning,
+    bgMain,
 };
 
 export default colors
