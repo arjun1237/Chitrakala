@@ -1,19 +1,68 @@
+
+
 .data-handler{
     display: flex;
+    text-align: center;
 }
 
 .data-handler p{
     margin: 0;
-    padding: 5px 10px;
+    padding: 3px 10px;
+    font-weight: 600;
 }
 
-.data-handler div{
-
+.data-handler > div{
+    background-color: #4db78e;
+    color: white;
+    margin: 10px;
+    border-radius: 3px;
 }
 
 .infobar{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     background-color: white;
     justify-content: space-between;
+}
+
+.otherinfo{
+    display: flex;
+    align-items: baseline;
+}
+
+.otherinfo > div{
+    padding: 20px 5px;
+    border-bottom: 3px solid #4db78e;
+    margin: 0 10px;
+}
+
+.nametime{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    margin: 10px 0;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.time{
+    display: flex;
+    justify-content: space-evenly;
+    color: #236ebe;
+}
+
+.time > div{
+    padding: 5px 30px;
+    cursor: pointer;
+    border: 1px solid #236ebe80;
+    margin: 0 20px;
+}
+
+.time > div:hover{
+    background-color: #236ebe;
+    color: white
+}
+
+.theatre{
 }

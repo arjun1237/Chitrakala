@@ -9,9 +9,9 @@ export default class Booking extends Component{
             <BookingContainer>
                 <div>
                     <Phases />
-                    <PhaseBody>
+                    <PhaseBody> 
                         <DateTimeSelection />
-                    </PhaseBody>
+                    </PhaseBody>                    
                 </div>
             </BookingContainer>
         )
@@ -48,6 +48,8 @@ const PhaseLine = styled.div`
 const PhaseHandler = styled.div`
     display: flex;
     align-items: center;
+    margin: auto;
+    width: fit-content;
 `
 
 const PhaseBall = styled.div`
@@ -59,7 +61,8 @@ const PhaseBall = styled.div`
 `
 
 const BookingContainer = styled.div`
-    display: grid;
-    place-items: center;
+    margin: auto;
+    width: 70%;
     height: 80vh;
+    margin-top: 30px;
 `
