@@ -14,7 +14,7 @@ export const StyledNavbar = Styled.div`
         .searchBox{
             background-color: ${color.bgWhite};
             color: ${color.textSecondary};
-            padding:5px;
+            padding:8px;
             border-radius: 4px;
             font-size: 20px;
             svg{
@@ -22,7 +22,7 @@ export const StyledNavbar = Styled.div`
             }
             input{
                 border: none;
-                font-size: 20px;
+                font-size: 18px;
                 flex: 1;
             }
             input:focus{
