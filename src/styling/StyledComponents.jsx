@@ -55,7 +55,7 @@ export const StyledNavbar = Styled.div`
 `;
 
 export const StyledTicket = Styled.div`
-	margin: 10px;
+	margin: 10px auto;
 	width: 400px;
 	.textDark {
 		color: ${color.textMain};
@@ -65,6 +65,9 @@ export const StyledTicket = Styled.div`
 	}
 	.textRed {
 		color: ${color.themeMain};
+    }
+    .textWarning {
+		color: ${color.textWarning};
 	}
 	.textSpaced {
 		letter-spacing: 3px;
@@ -140,6 +143,11 @@ export const StyledTicket = Styled.div`
     .button{
         background-color: ${color.bgMain};
         color: ${color.textWhite};
+        opacity:0.7;
+        transition: opacity 0.3s;
         padding:10px 20px;
+    }
+    .button:hover{
+        opacity:1;
     }
 `;
