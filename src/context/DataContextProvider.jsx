@@ -14,6 +14,12 @@ export default class DataContextProvider extends React.Component{
         }
     }
 
+    phaseChange = (val) => {
+        this.setState({
+            phase: val
+        })
+    }
+
     returnFilter = () => {
         console.log("here")
         let filter = this.state.filterMovies.trim().toLowerCase()
@@ -35,7 +41,7 @@ export default class DataContextProvider extends React.Component{
     }
 
     render(){
-        const value = {...this.state, filterMovies: this.returnFilter(), updateFilter: this.updateFilter}
+        const value = {...this.state, filterMovies: this.returnFilter(), updateFilter: this.updateFilter, phaseChange: this.phaseChange}
         return(
             <DataContext.Provider value={value}>
                 {this.props.children}

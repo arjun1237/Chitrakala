@@ -37,6 +37,7 @@ export const StyledMovieCard = Styled.div`
         }
     }
     .bookButton{
+        border: none;
         color:${color.textWhite};
         background: ${color.bgMain};
         padding: 10px;
@@ -44,6 +45,10 @@ export const StyledMovieCard = Styled.div`
         text-align: center;
         font-weight: 700;
         cursor: pointer;
+    }
+
+    .bookButton:focus{
+        outline: none;
     }
 
     .bookButton:hover{

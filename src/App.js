@@ -13,12 +13,7 @@ function App() {
       <Navbar />
       <DataContext.Consumer>
         {({phase}) => 
-          phase === 0 &&
-          ( <>
-              <LandingPage/>
-              {/* <Booking /> */}
-            </>
-          )
+          phase === 0 ? (<LandingPage/>) : (<Booking />)
         }
       </DataContext.Consumer>
     </div>

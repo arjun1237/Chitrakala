@@ -13,10 +13,10 @@ export default class Booking extends Component{
                 <div>
                     <Phases />
                     <PhaseBody> 
-                        {/* <DateTimeSelection /> */}
+                        <DateTimeSelection />
                         {/* <SeatSelection /> */}
                         {/* <ConformationPage />       */}
-                        <SummaryPage />      
+                        {/* <SummaryPage />       */}
                     </PhaseBody>                    
                 </div>
             </BookingContainer>
