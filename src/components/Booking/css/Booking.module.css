@@ -39,6 +39,7 @@
 .nametime{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
     background-color: white;
     margin: 10px 0;
