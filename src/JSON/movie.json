@@ -17,7 +17,7 @@
     "rating": [2, 3, 4, 5, 5]
   },
   {
-    "id": 1,
+    "id": 2,
     "title": "Harry Potter",
     "language": "English",
     "image": "https://m.media-amazon.com/images/M/MV5BMjIyZGU4YzUtNDkzYi00ZDRhLTljYzctYTMxMDQ4M2E0Y2YxXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UY1200_CR85,0,630,1200_AL_.jpg",
@@ -34,7 +34,7 @@
     "rating": [2, 3, 4, 5, 5]
   },
   {
-    "id": 1,
+    "id": 3,
     "title": "Pokiri",
     "language": "Telugu",
     "image": "https://i2.wp.com/www.socialnews.xyz/wp-content/uploads/2020/04/26/Superstar-Mahesh-Babu-s-Pokiri-Movie-14th-Anniversary-Common-DP-.png?quality=90&zoom=1&ssl=1",
@@ -51,7 +51,7 @@
     "rating": [1, 1, 4, 5, 1]
   },
   {
-    "id": 1,
+    "id": 4,
     "title": "Ulidavaru Kandante",
     "language": "Kannada",
     "image": "https://i.pinimg.com/originals/aa/1f/92/aa1f92bfa7a05deaa3302591fa148216.jpg",
@@ -68,7 +68,7 @@
     "rating": [5, 5, 4, 5, 5]
   },
   {
-    "id": 1,
+    "id": 5,
     "title": "Dil Bechara",
     "language": "Hindi",
     "image": "https://media.santabanta.com/newsite/cinemascope/feed/dil-bechara3.jpg",
@@ -85,7 +85,7 @@
     "rating": [2, 3, 4, 5, 5]
   },
   {
-    "id": 1,
+    "id": 6,
     "title": "Gully Boy",
     "language": "Hindi",
     "image": "https://pbs.twimg.com/media/Dv4DwdGUYAYxhq6.jpg",
@@ -102,7 +102,7 @@
     "rating": [2, 3, 4, 5, 5]
   },
   {
-    "id": 1,
+    "id": 7,
     "title": "Sairat",
     "language": "Marathi",
     "image": "https://static.toiimg.com/thumb/imgsize-81617,msid-52804185,width-400,resizemode-4/52804185.jpg",
@@ -119,7 +119,7 @@
     "rating": [2, 3, 4, 5, 5]
   },
   {
-    "id": 1,
+    "id": 8,
     "title": "Avane Srimannarayana",
     "language": "Kannada",
     "image": "https://m.media-amazon.com/images/M/MV5BMzJmNDBlMzUtMjJjMy00YjRjLTliY2MtNjcwMmExODYzYTZmXkEyXkFqcGdeQXVyOTMxMTk2MTc@._V1_.jpg",
@@ -136,7 +136,7 @@
     "rating": [2, 3, 4, 5, 5]
   },
   {
-    "id": 1,
+    "id": 9,
     "title": "Deadpool",
     "language": "english",
     "image": "https://images-na.ssl-images-amazon.com/images/I/81rI-POmpmL._SL1500_.jpg",
@@ -153,7 +153,7 @@
     "rating": [2, 3, 4, 5, 5]
   },
   {
-    "id": 1,
+    "id": 10,
     "title": "Black Panther",
     "language": "English",
     "image": "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_.jpg",
