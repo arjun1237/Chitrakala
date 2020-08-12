@@ -25,8 +25,9 @@ export const StyledMovieCard = Styled.div`
         flex: 1;
         padding: 7px;
         .name{
-            font-size: 25px;
+            font-size: 22px;
             color:${color.textMain}
+            font-weigth: 700;
         }
         .language{
             color:${color.textSecondary}
@@ -42,5 +43,10 @@ export const StyledMovieCard = Styled.div`
         font-size: 20px;
         text-align: center;
         font-weight: 700;
+        cursor: pointer;
+    }
+
+    .bookButton:hover{
+        background: red;
     }
 `

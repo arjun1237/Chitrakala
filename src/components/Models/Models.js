@@ -48,7 +48,7 @@ export class Slots{
         // return slots by ID - return from context API
     }
 
-    modifySlotsSlotsByID(id){
+    modifySlotsByID(id){
         // modify slots and return to API
     }
 }

@@ -2,17 +2,22 @@ import React from "react";
 import MovieCard from "./MovieCard";
 import movieData from "../../JSON/movie.json"
 import { StyledLandingPage } from "../../styling/StyledLandingPageComponents";
+import {DataContext} from '../../context/DataContextProvider'
 
 class LandingPage extends React.Component {
 	constructor(props) {
 		super(props);
+	}
+
+	returnMovies(){
+		return this.context.filterMovies
 	}
 	
 	render() {
 		return (
 			<StyledLandingPage>
 				{
-                    movieData?.map(movie=>
+                    this.returnMovies()?.map(movie=>
                         <MovieCard key={movie.id} data={movie}/>
                         )
                 }
@@ -20,5 +25,7 @@ class LandingPage extends React.Component {
 		);
 	}
 }
+
+LandingPage.contextType = DataContext
 
 export default LandingPage;
