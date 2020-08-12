@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import colors from '../../styling/theme'
 import styled from 'styled-components'
 import DateTimeSelection from './DateTimeSelection'
+import SeatSelection from './SeatSelection'
 
 export default class Booking extends Component{
     render(){
@@ -10,7 +11,8 @@ export default class Booking extends Component{
                 <div>
                     <Phases />
                     <PhaseBody> 
-                        <DateTimeSelection />
+                        {/* <DateTimeSelection /> */}
+                        <SeatSelection />
                     </PhaseBody>                    
                 </div>
             </BookingContainer>
