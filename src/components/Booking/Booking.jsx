@@ -14,9 +14,9 @@ export default class Booking extends Component{
         switch(phase){
             case 2: phRender = <SeatSelection />
                     break;
-            case 3: phRender = <ConformationPage />  
+            case 3: phRender = <SummaryPage />  
                     break;
-            case 4: phRender = <SummaryPage />  
+            case 4: phRender = <ConformationPage /> 
                     break;
         }
         return(

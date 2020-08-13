@@ -43,7 +43,7 @@ export default class SeatSelection extends Component{
                 <SeatHandler>
                     {[...Array(10).keys()].map(x => 
                         <SeatRow>
-                            {[...Array(10).keys()].map((y, j) => <Seat select={seats[++m][1]} key={m} > <div style={{width: "100%", display: "flex", justifyContent: "center"}} onClick={() => this.selectSeat(y === 10 ? (x + "0") : (x + "" + (y+1)))}> {seats[m][0]} </div></Seat>)}
+                            {[...Array(10).keys()].map((y, j) => <Seat select={seats[++m][1]} key={m} > <div style={{width: "100%", display: "flex", justifyContent: "center"}} onClick={() => this.selectSeat(y === 9 ? ((x+1) + "0") : (x + "" + (y+1)))}> {seats[m][0]} </div></Seat>)}
                         </SeatRow>)}
                 </SeatHandler>
                 <div style={{display: "flex"}}>

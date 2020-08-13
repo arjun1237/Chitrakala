@@ -29,8 +29,16 @@ export default class DataContextProvider extends React.Component{
         this.slots = new SlotData()
     }
 
+    addPopcorn = (popcorn) => {
+        this.setState({popcorn})
+    }
+
+    dataChange4 = (popcorn) => {
+        this.setState({popcorn, phase: 4}, () => console.log(this.state))
+    }
+
     dataChange3 = (seatSelect) => {
-        this.setState({seatSelect, phase: 3})
+        this.setState({seatSelect, phase: 3, price: seatSelect.length * 125})
     }
 
     dataChange2 = (slotSelect) => {
@@ -89,7 +97,8 @@ export default class DataContextProvider extends React.Component{
     render(){
         const value = {...this.state, filterMovies: this.returnFilter(), updateFilter: this.updateFilter, 
                         dataChange: this.dataChange, destructureDate: this.destructureDate, changeDate: this.changeDate,
-                        dataChange2: this.dataChange2, dataChange3: this.dataChange3}
+                        dataChange2: this.dataChange2, dataChange3: this.dataChange3, dataChange4: this.dataChange4,
+                        addPopcorn: this.addPopcorn}
         return(
             <DataContext.Provider value={value}>
                 {this.props.children}
