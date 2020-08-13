@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Movies as MovieData} from '../components/Models/Models'
+import {Movies as MovieData, Slots as SlotData} from '../components/Models/Models'
 
 export const DataContext = React.createContext()
 
@@ -10,14 +10,52 @@ export default class DataContextProvider extends React.Component{
         this.state = {
             movies: new MovieData().getMovies(),
             filterMovies: '',
-            phase: 0
+            phase: 0,
+            language: "English",
+            location: "Bangalore",
+            movieSelect: null,
+            dateSelect: null,
+            timeSelect: null,
+            slotDisplay: null,
+            slotSelect: null,
+            seatSelect: [],
+            seatNotDisplay: [],
+            popcorn: false,
+            price: 0,
+            bookingID: null
         }
     }
 
-    phaseChange = (val) => {
-        this.setState({
-            phase: val
-        })
+    dataChange2 = (id) => {
+        console.log(id)
+    }
+
+    dataChange = (phase, movieSelect) => {
+        let date = new Date()
+        date = new Date(date.setDate(date.getDate() + 1))
+        let dateSelect = this.destructureDate(date)
+        let slotDisplay = new SlotData().getAllSlotsBasedOnDateLocationMovie(dateSelect, this.state.location, movieSelect)
+        this.setState({phase, movieSelect, dateSelect, slotDisplay}, () => console.log(this.state))
+    }
+
+    destructureDate = (date) => {
+        let year = date.getFullYear()
+        let month = date.getMonth() + 1
+        if(month <= 9) month = "0" + month
+        let day = date.getDate()
+        if(day <= 9) day = "0" + day
+        let dateSelect = year + '/' + month + '/' + day
+        return dateSelect
+    }
+
+    changeDate = (dateSelect) => {
+        let slotDisplay = new SlotData().getAllSlotsBasedOnDateLocationMovie(dateSelect, this.state.location, this.state.movieSelect)
+        this.setState({dateSelect, slotDisplay})
+    }
+
+    getSlots = (date) => {
+        let slotDisplay = new SlotData().getAllSlotsBasedOnDateLocationMovie(this.state.dateSelect, this.state.location, this.state.movieSelect)
+        this.setState({slotDisplay})
     }
 
     returnFilter = () => {
@@ -41,7 +79,9 @@ export default class DataContextProvider extends React.Component{
     }
 
     render(){
-        const value = {...this.state, filterMovies: this.returnFilter(), updateFilter: this.updateFilter, phaseChange: this.phaseChange}
+        const value = {...this.state, filterMovies: this.returnFilter(), updateFilter: this.updateFilter, 
+                        dataChange: this.dataChange, destructureDate: this.destructureDate, changeDate: this.changeDate,
+                        dataChange2: this.dataChange2}
         return(
             <DataContext.Provider value={value}>
                 {this.props.children}

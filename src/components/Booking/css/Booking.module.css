@@ -12,10 +12,15 @@
 }
 
 .data-handler > div{
-    background-color: #4db78e;
-    color: white;
+    border: 1px solid #4db78e;
     margin: 10px;
     border-radius: 3px;
+    cursor: pointer;
+}
+
+.data-handler > div:hover{
+    background-color: #4db78e;
+    color: white;
 }
 
 .infobar{
@@ -47,20 +52,27 @@
     font-weight: 600;
 }
 
-.time{
+.timeHandle{
     display: flex;
     justify-content: space-evenly;
-    color: #236ebe;
 }
 
-.time > div{
+.time{
     padding: 5px 30px;
     cursor: pointer;
     border: 1px solid #236ebe80;
     margin: 0 20px;
+    color: #236ebe;
 }
 
-.time > div:hover{
+.time-inactive{
+    padding: 5px 30px;
+    border: 1px solid #adb0b4c2;
+    margin: 0 20px;
+    color: #8e9092ca;
+}
+
+.time:hover{
     background-color: #236ebe;
     color: white
 }

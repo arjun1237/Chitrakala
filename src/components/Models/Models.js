@@ -61,7 +61,7 @@ export class Slots {
 			const cinema = new Cinema().getCinemaByID(slot.cinema_id);
 			const slotDate = new Date(slot.date);
 			let checkLine =
-				cinema.location === location &&
+				cinema.location.toLowerCase() === location.toLowerCase() &&
 				slot.movie_id === movie_id &&
 				new Date(date).getTime() === slotDate.getTime();
 			if (checkLine) {

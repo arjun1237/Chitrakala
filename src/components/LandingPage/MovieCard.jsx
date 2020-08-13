@@ -3,10 +3,10 @@ import { StyledMovieCard } from "../../styling/StyledLandingPageComponents";
 import {DataContext} from '../../context/DataContextProvider'
 
 function MovieCard(props){
-	const {image, title, language} = props.data;
+	const {image, title, language, id} = props.data;
 	return (
 		<DataContext.Consumer>
-			{({phaseChange}) => 
+			{({dataChange}) => 
 				(
 					<StyledMovieCard>
 						<div
@@ -20,7 +20,7 @@ function MovieCard(props){
 							<div className="name">{title}</div>
 							<div className="language">{language}</div>
 						</div>
-						<button className="bookButton" onClick={() => phaseChange(1)}>Book Now</button>
+						<button className="bookButton" onClick={() => dataChange(1, id)}>Book Now</button>
 					</StyledMovieCard>
 				)			
 			}
