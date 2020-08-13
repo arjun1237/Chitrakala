@@ -3,7 +3,7 @@ import colors from '../../styling/theme'
 import styled from 'styled-components'
 import DateTimeSelection from './DateTimeSelection'
 import SeatSelection from './SeatSelection'
-import ConformationPage from './ConformationPage'
+import ConfirmationPage from './ConformationPage'
 import SummaryPage from './SummaryPage'
 import {DataContext} from '../../context/DataContextProvider'
 
@@ -16,7 +16,7 @@ export default class Booking extends Component{
                     break;
             case 3: phRender = <SummaryPage />  
                     break;
-            case 4: phRender = <ConformationPage /> 
+            case 4: phRender = <ConfirmationPage /> 
                     break;
         }
         return(

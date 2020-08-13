@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Movies as MovieData, Slots as SlotData} from '../components/Models/Models'
+import {v4 as uuidv4} from 'uuid'
 
 export const DataContext = React.createContext()
 
@@ -33,8 +34,8 @@ export default class DataContextProvider extends React.Component{
         this.setState({popcorn})
     }
 
-    dataChange4 = (popcorn) => {
-        this.setState({popcorn, phase: 4}, () => console.log(this.state))
+    dataChange4 = (popcorn) => {        
+        this.setState({popcorn, phase: 4, bookingID: uuidv4()}, () => console.log(this.state))
     }
 
     dataChange3 = (seatSelect) => {

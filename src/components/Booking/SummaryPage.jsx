@@ -14,7 +14,7 @@ class SummaryPage extends React.Component {
 	render() {
 		let {price, dateSelect, seatSelect, timeSelect} = this.context
 		price += this.context.popcorn ? 100 : 0
-		let movie = this.context.movies[this.context.movieSelect]
+		let movie = this.context.movies.filter(x => x.id === this.context.movieSelect)[0]
 		console.log(movie)
 		return (
 			<StyledTicket>
@@ -26,7 +26,7 @@ class SummaryPage extends React.Component {
 							</div>
 							<div className="mtb textB1 textLarge1 textDark">{movie.title}</div>
 							<div className="mtb textSecondary">{movie.language}</div>
-							<div class="mtb textDark textB1">
+							<div className="mtb textDark textB1">
 							<div>{dateSelect}</div>
 							<div>{timeSelect}</div>
 							</div>

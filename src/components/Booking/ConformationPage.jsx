@@ -1,46 +1,56 @@
 import React from "react";
 import { StyledTicket } from "../../styling/StyledComponents";
+import {DataContext} from '../../context/DataContextProvider'
 
-class ConformationPage extends React.Component {
+class ConfirmationPage extends React.Component {
 	constructor(props) {
 		super(props);
 	}
 
 	render() {
+		let {movies, movieSelect, dateSelect, timeSelect, slotSelect, popcorn, price, bookingID} = this.context
+		let movie = movies.filter(x => x.id === movieSelect)[0]
+		price += popcorn ? 100 : 0
 		return (
 			<StyledTicket>
 				<div className="topDiv">
 					<div className="mtb textLarge1 textSpaced textDark">
-						ORDER CONFORMATION
+						ORDER CONFIRMATION
 					</div>
 					<div className="flexEqual">
 						<div>
-							<div className="mtb textB2 textLarge1 textRed">Jolly LLB 2</div>
-							<div className="mtb textSecondary">Hindi</div>
+							<div className="mtb textB2 textLarge1 textRed">{movie.title}</div>
+							<div className="mtb textSecondary">{movie.language}</div>
 							<div class="mtb textDark textB1">
-								<div>Fri, 10 Feb, 2017</div>
-								<div>8:15 pm</div>
+								<div>{dateSelect}</div>
+								<div>{timeSelect}</div>
 							</div>
 						</div>
 						<div className="textCenter">
-							<div className="textLarge3 textDark">3</div>
+							<div className="textLarge3 textDark">{slotSelect.language}</div>
 							<div className="textSecondary">tickets</div>
 						</div>
+					</div>
+					<div style={{display: "flex", justifyContent: "space-between"}}>
+						<small>Booking ID</small>
+						<small>{bookingID}</small>
 					</div>
 				</div>
 				<div className="bottomDiv">
 					<div className="flexEqual">
 						<div className="textSecondary">Sub Total:</div>
-						<div className="textDark textLarge1">₹ 1140</div>
+						<div className="textDark textLarge1">₹ {price}</div>
 					</div>
 				</div>
 				<div className="yellowDiv flexEqual">
 					<div className="textSecondary">Amount Payable</div>
-					<div className="textLarge3 textDark">₹ 1246</div>
+					<div className="textLarge3 textDark">₹ {Math.round(price + price * 0.18)}</div>
 				</div>
 			</StyledTicket>
 		);
 	}
 }
 
-export default ConformationPage;
+ConfirmationPage.contextType = DataContext
+
+export default ConfirmationPage;
