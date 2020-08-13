@@ -80,7 +80,13 @@ export class Slots {
 	}
 
 	getSlotsByID(id) {
-		// return slots by ID - return from context API
+        let res = this.slotsDB.filter(x => x.id === id)
+        if(res.length > 0){
+            return res[0]
+        }
+        else{
+            return null
+        }
 	}
 
 	modifySlotsSlotsByID(id) {

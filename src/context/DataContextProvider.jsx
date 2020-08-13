@@ -17,6 +17,7 @@ export default class DataContextProvider extends React.Component{
             dateSelect: null,
             timeSelect: null,
             slotDisplay: null,
+            slotDetails: null,
             slotSelect: null,
             seatSelect: [],
             seatNotDisplay: [],
@@ -24,17 +25,20 @@ export default class DataContextProvider extends React.Component{
             price: 0,
             bookingID: null
         }
+
+        this.slots = new SlotData()
     }
 
-    dataChange2 = (id) => {
-        console.log(id)
+    dataChange2 = (slotSelect) => {
+        let slotDetails = this.slots.getSlotsByID(Number(slotSelect))
+        this.setState({slotSelect, phase : 2, slotDetails}, () => console.log(this.state))
     }
 
     dataChange = (phase, movieSelect) => {
         let date = new Date()
         date = new Date(date.setDate(date.getDate() + 1))
         let dateSelect = this.destructureDate(date)
-        let slotDisplay = new SlotData().getAllSlotsBasedOnDateLocationMovie(dateSelect, this.state.location, movieSelect)
+        let slotDisplay = this.slots.getAllSlotsBasedOnDateLocationMovie(dateSelect, this.state.location, movieSelect)
         this.setState({phase, movieSelect, dateSelect, slotDisplay}, () => console.log(this.state))
     }
 

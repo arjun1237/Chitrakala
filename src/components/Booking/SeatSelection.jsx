@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 import colors from '../../styling/theme'
+import {DataContext} from '../../context/DataContextProvider'
 
 export default class SeatSelection extends Component{
     render(){
