@@ -22,7 +22,7 @@ export default class Booking extends Component{
         return(
             <BookingContainer>
                 <div>
-                    <Phases phase={phase} />
+                    <Phases phase={phase} backTo2={this.context.backToPhase2} backTo1={this.context.backToPhase1} />
                     <PhaseBody>   
                         {phRender}
                     </PhaseBody>                    
@@ -35,14 +35,14 @@ export default class Booking extends Component{
 Booking.contextType = DataContext
 
 
-function Phases({phase}){
+function Phases({phase, backTo2, backTo1}){
     return(
         <PhaseHandler>
             <PhaseBall bg={phase >= 1 && colors.themeSuccess} />
             <PhaseLine />
-            <PhaseBall bg={phase >= 2 && colors.themeSuccess} />
+            <PhaseBall bg={phase >= 2 && colors.themeSuccess} onClick={backTo1} />
             <PhaseLine />
-            <PhaseBall bg={phase >= 3 && colors.themeSuccess} />
+            <PhaseBall bg={phase >= 3 && colors.themeSuccess} onClick={backTo2} />
             <PhaseLine />
             <PhaseBall bg={phase >= 4 && colors.themeSuccess} />
         </PhaseHandler>
