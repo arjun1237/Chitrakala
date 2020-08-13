@@ -8,7 +8,7 @@ class ConfirmationPage extends React.Component {
 	}
 
 	render() {
-		let {movies, movieSelect, dateSelect, timeSelect, slotSelect, popcorn, price, bookingID} = this.context
+		let {movies, movieSelect, dateSelect, timeSelect, seatSelect, popcorn, price, bookingID} = this.context
 		let movie = movies.filter(x => x.id === movieSelect)[0]
 		price += popcorn ? 100 : 0
 		return (
@@ -27,7 +27,7 @@ class ConfirmationPage extends React.Component {
 							</div>
 						</div>
 						<div className="textCenter">
-							<div className="textLarge3 textDark">{slotSelect.language}</div>
+							<div className="textLarge3 textDark">{seatSelect.length}</div>
 							<div className="textSecondary">tickets</div>
 						</div>
 					</div>
