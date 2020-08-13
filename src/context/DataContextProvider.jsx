@@ -51,6 +51,8 @@ export default class DataContextProvider extends React.Component {
 	};
 
 	dataChange4 = (popcorn) => {
+        let {slotSelect, seatSelect} = this.state
+        this.slots.modifySlotsAddBookedSeats( slotSelect, seatSelect)
 		this.setState({ popcorn, phase: 4, bookingID: uuidv4() }, () =>
 			console.log(this.state)
 		);
@@ -121,7 +123,6 @@ export default class DataContextProvider extends React.Component {
 			});
 	};
 
-	setPhase3 = () => {};
 
 	destructureDate = (date) => {
 		let year = date.getFullYear();
@@ -144,7 +145,7 @@ export default class DataContextProvider extends React.Component {
 	};
 
 	changeDate = (dateSelect) => {
-		let slotDisplay = new SlotData().getAllSlotsBasedOnDateLocationMovie(
+		let slotDisplay = this.slots.getAllSlotsBasedOnDateLocationMovie(
 			dateSelect,
 			this.state.location,
 			this.state.movieSelect
@@ -153,7 +154,7 @@ export default class DataContextProvider extends React.Component {
 	};
 
 	getSlots = (date) => {
-		let slotDisplay = new SlotData().getAllSlotsBasedOnDateLocationMovie(
+		let slotDisplay = this.slots.getAllSlotsBasedOnDateLocationMovie(
 			this.state.dateSelect,
 			this.state.location,
 			this.state.movieSelect

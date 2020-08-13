@@ -21,7 +21,7 @@ class ConfirmationPage extends React.Component {
 						<div>
 							<div className="mtb textB2 textLarge1 textRed">{movie.title}</div>
 							<div className="mtb textSecondary">{movie.language}</div>
-							<div class="mtb textDark textB1">
+							<div className="mtb textDark textB1">
 								<div>{dateSelect}</div>
 								<div>{timeSelect}</div>
 							</div>

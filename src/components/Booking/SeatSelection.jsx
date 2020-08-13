@@ -43,7 +43,8 @@ export default class SeatSelection extends Component {
 
 	render() {
 		let { slotDetails } = this.context;
-		let seatsBooked = slotDetails.seats_booked;
+        let seatsBooked = slotDetails.seats_booked;
+        console.log(seatsBooked)
 		let seats = this.getSeats(seatsBooked);
 		let m = -1;
 		return (
