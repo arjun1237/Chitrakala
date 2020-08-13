@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styles from "./css/Booking.module.css";
 import { DataContext } from "../../context/DataContextProvider";
+import {v4 as uuidv4} from 'uuid'
 
 export default class DateTimeSelection extends Component {
 	constructor(props) {
@@ -61,6 +62,7 @@ export default class DateTimeSelection extends Component {
 						{next5 &&
 							next5.map((x) => (
 								<div
+									key={uuidv4()}
 									onClick={() => this.context.changeDate(x[2])}
 									className={x[2] === dSelect ? styles.active : styles.inactive}
 								>
@@ -86,7 +88,8 @@ export default class DateTimeSelection extends Component {
 				<div className={styles.info}>
 					{theatres &&
 						theatres.map((x) => (
-							<div className={styles.nametime}>
+							<div key={uuidv4()} 
+								className={styles.nametime}>
 								<div className={styles.theatre}>Theatre {x}</div>
 								<div className={styles.timeHandle}>
 									{payload[x].map((y) => (

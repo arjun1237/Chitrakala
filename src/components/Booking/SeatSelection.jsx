@@ -51,7 +51,7 @@ export default class SeatSelection extends Component {
 				<CinemaHandler> SCREEN THIS WAY </CinemaHandler>
 				<SeatHandler>
 					{[...Array(10).keys()].map((x) => (
-						<SeatRow>
+						<SeatRow key={x}>
 							{[...Array(10).keys()].map((y, j) => (
 								<Seat
 									select={seats[++m][1]}
