@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Movies as MovieData, Slots as SlotData} from '../components/Models/Models'
 import {v4 as uuidv4} from 'uuid'
+import getLocation from "../components/Models/Locator"
 
 export const DataContext = React.createContext()
 
@@ -32,6 +33,11 @@ export default class DataContextProvider extends React.Component{
 
     addPopcorn = (popcorn) => {
         this.setState({popcorn})
+    }
+    
+    setLocation = () => {
+        let location = getLocation()
+        this.getLocation({location})
     }
 
     dataChange4 = (popcorn) => {        
