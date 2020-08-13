@@ -41,6 +41,14 @@
     margin: 0 10px;
 }
 
+.otherinfo  select{
+    border:none;
+    background-color: white;
+    font-size: 17px;
+}
+.otherinfo select:focus{
+    outline: none;
+}
 .nametime{
     display: flex;
     justify-content: space-between;

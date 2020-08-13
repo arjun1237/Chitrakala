@@ -6,7 +6,7 @@ function MovieCard(props){
 	const {image, title, language, id} = props.data;
 	return (
 		<DataContext.Consumer>
-			{({dataChange}) => 
+			{({dataChange1}) => 
 				(
 					<StyledMovieCard>
 						<div
@@ -20,7 +20,7 @@ function MovieCard(props){
 							<div className="name">{title}</div>
 							<div className="language">{language}</div>
 						</div>
-						<button className="bookButton" onClick={() => dataChange(1, id)}>Book Now</button>
+						<button className="bookButton" onClick={() => dataChange1(id)}>Book Now</button>
 					</StyledMovieCard>
 				)			
 			}

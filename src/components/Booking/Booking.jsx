@@ -9,20 +9,20 @@ import {DataContext} from '../../context/DataContextProvider'
 
 export default class Booking extends Component{
     render(){
-        const {phase} = this.context
+        const {phase,setPhase1,setPhase2} = this.context
         let phRender = <DateTimeSelection />
         switch(phase){
             case 2: phRender = <SeatSelection />
                     break;
             case 3: phRender = <SummaryPage />  
                     break;
-            case 4: phRender = <ConfirmationPage /> 
+            case 4: phRender = <ConfirmationPage/> 
                     break;
         }
         return(
             <BookingContainer>
                 <div>
-                    <Phases phase={phase} backTo2={this.context.backToPhase2} backTo1={this.context.backToPhase1} />
+                    <Phases phase={phase} setPhase1={setPhase1} setPhase2={setPhase2}/>
                     <PhaseBody>   
                         {phRender}
                     </PhaseBody>                    
@@ -35,14 +35,14 @@ export default class Booking extends Component{
 Booking.contextType = DataContext
 
 
-function Phases({phase, backTo2, backTo1}){
+function Phases({phase, setPhase1,setPhase2}){
     return(
         <PhaseHandler>
-            <PhaseBall bg={phase >= 1 && colors.themeSuccess} />
+            <PhaseBall bg={phase >= 1 && colors.themeSuccess} onClick={setPhase1}/>
             <PhaseLine />
-            <PhaseBall bg={phase >= 2 && colors.themeSuccess} onClick={backTo1} />
+            <PhaseBall bg={phase >= 2 && colors.themeSuccess} onClick={setPhase2} />
             <PhaseLine />
-            <PhaseBall bg={phase >= 3 && colors.themeSuccess} onClick={backTo2} />
+            <PhaseBall bg={phase >= 3 && colors.themeSuccess} />
             <PhaseLine />
             <PhaseBall bg={phase >= 4 && colors.themeSuccess} />
         </PhaseHandler>

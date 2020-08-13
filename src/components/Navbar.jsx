@@ -31,7 +31,7 @@ class Navbar extends React.Component {
           <StyledNavbar>
               <div className="content">
                   <div>
-                      <div className="logo">
+                      <div className="logo" onClick={this.context.setPhase0}>
                           ChitraKala
                       </div>
                       <div className="searchBox">
