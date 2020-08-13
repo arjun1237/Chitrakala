@@ -29,10 +29,11 @@ class ConfirmationPage extends React.Component {
 						<div className="textCenter">
 							<div className="textLarge3 textDark">{seatSelect.length}</div>
 							<div className="textSecondary">tickets</div>
+							<div className="textDark" style={{marginTop: "20px"}}><b>Seats:</b> {seatSelect.join(', ')}</div>
 						</div>
 					</div>
-					<div style={{display: "flex", justifyContent: "space-between"}}>
-						<small>Booking ID</small>
+					<div style={{display: "flex", justifyContent: "space-between", marginTop: "20px"}}>
+						<small><b>Booking ID</b></small>
 						<small>{bookingID}</small>
 					</div>
 				</div>

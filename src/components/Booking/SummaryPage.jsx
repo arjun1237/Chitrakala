@@ -28,11 +28,12 @@ class SummaryPage extends React.Component {
 							<div className="mtb textDark textB1">
 							<div>{dateSelect}</div>
 							<div>{timeSelect}</div>
-							</div>
+						</div>
 						</div>
 						<div className="textCenter">
 						<div className="textLarge3 textDark">{seatSelect.length}</div>
-							<div className="textSecondary">tickets</div>
+						<div className="textSecondary">tickets</div>
+						<div className="textDark" style={{marginTop: "20px"}}><b>Seats:</b> {seatSelect.join(', ')}</div>
 						</div>
 					</div>
 					<div className="mtb flexEqual">
@@ -40,7 +41,7 @@ class SummaryPage extends React.Component {
                             <img src="https://image.flaticon.com/icons/svg/2933/2933170.svg" width="40px"/>
 						</div>
 						<div className="textDark">
-							<input type="checkbox" name="popcorn" onChange={this.handleChange} />
+							<input type="checkbox" name="popcorn" onChange={this.handleChange}  />
 						</div>
 					</div>
 				</div>

@@ -75,9 +75,10 @@ export default class SeatSelection extends Component {
 					))}
 				</SeatHandler>
 				<div style={{ display: "flex" }}>
-					<Button onClick={() => this.context.dataChange3(this.state.seatsSelect)}>
-						PROCEED
-					</Button>
+                    {this.state.seatsSelect.length === 0 ? 
+                        <Button> PROCEED </Button> :
+                        <Button onClick={() => this.context.dataChange3(this.state.seatsSelect)}> PROCEED </Button>
+                    }					
 				</div>
 			</div>
 		);
