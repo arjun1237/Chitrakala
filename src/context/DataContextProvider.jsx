@@ -22,7 +22,6 @@ export default class DataContextProvider extends React.Component{
             slotDetails: null,
             slotSelect: null,
             seatSelect: [],
-            seatNotDisplay: [],
             popcorn: false,
             price: 0,
             bookingID: null
@@ -31,13 +30,21 @@ export default class DataContextProvider extends React.Component{
         this.slots = new SlotData()
     }
 
+    backToPhase2 = () => {
+        console.log("2")
+    }
+
+    backToPhase1 = () => {
+        console.log("1")
+    }
+
     addPopcorn = (popcorn) => {
         this.setState({popcorn})
     }
     
-    setLocation = () => {
-        let location = getLocation()
-        this.getLocation({location})
+    setLocation = async() => {
+        let location = await getLocation()
+        this.setState({location})
     }
 
     dataChange4 = (popcorn) => {        
@@ -54,6 +61,7 @@ export default class DataContextProvider extends React.Component{
     }
 
     dataChange = (phase, movieSelect) => {
+        this.setLocation()
         let date = new Date()
         date = new Date(date.setDate(date.getDate() + 1))
         let dateSelect = this.destructureDate(date)
@@ -105,7 +113,8 @@ export default class DataContextProvider extends React.Component{
         const value = {...this.state, filterMovies: this.returnFilter(), updateFilter: this.updateFilter, 
                         dataChange: this.dataChange, destructureDate: this.destructureDate, changeDate: this.changeDate,
                         dataChange2: this.dataChange2, dataChange3: this.dataChange3, dataChange4: this.dataChange4,
-                        addPopcorn: this.addPopcorn}
+                        addPopcorn: this.addPopcorn, backToPhase1: this.backToPhase1, backToPhase2: this.backToPhase2,
+                        setLocation: this.setLocation}
         return(
             <DataContext.Provider value={value}>
                 {this.props.children}
