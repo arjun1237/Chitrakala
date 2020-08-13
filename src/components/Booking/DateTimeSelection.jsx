@@ -52,7 +52,7 @@ export default class DateTimeSelection extends Component{
                     <div className={styles["data-handler"]}>
                         {next5 &&
                             next5.map(x => 
-                                <div onClick={() => this.context.changeDate(x[2])} style={x[2] === dSelect ?{background: "#4db78e", color: "white"} : {color: "#4db78e"}} >
+                                <div onClick={() => this.context.changeDate(x[2])} className={x[2] === dSelect ? styles.active : styles.inactive}>
                                     <p>{x[0]}</p>
                                     <p>{x[1]}</p>
                                 </div>

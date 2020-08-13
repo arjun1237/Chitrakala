@@ -9,6 +9,10 @@ class LandingPage extends React.Component {
 		super(props);
 	}
 
+	componentDidMount = () => {
+		this.context.setLocation()
+	}
+
 	returnMovies(){
 		return this.context.filterMovies
 	}

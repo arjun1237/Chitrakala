@@ -77,5 +77,14 @@
     color: white
 }
 
+.active{
+    background: #4db78e; 
+    color: white;
+}
+
+.inactive{
+    color: #4db78e;
+}
+
 .theatre{
 }
