@@ -86,11 +86,14 @@ export class Slots {
         }
         else{
             return null
-        }
+        } 
 	}
 
-	modifySlotsSlotsByID(id) {
-		// modify slots and return to API
+	modifySlotsAddBookedSeats(id, bookedSeats ) {
+        let slot = this.getSlotsByID(id)
+        slot.seats_booked.push(...bookedSeats)
+        localStorage.setItem("slots", JSON.stringify(this.slotsDB))
+        // modify slots and return to API
 	}
 }
 
@@ -135,7 +138,8 @@ export class Bookings {
 	}
 
 	addBooking(id, slot_id, email, popcorn, price, seats) {
-		// to be added to context API
+        
+        // to be added to context API
 		// must update the slots seats based on slot ID. - see modifySlotsSlotsByID method.
 	}
 }

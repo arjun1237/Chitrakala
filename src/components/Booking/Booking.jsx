@@ -22,7 +22,7 @@ export default class Booking extends Component{
         return(
             <BookingContainer>
                 <div>
-                    <Phases phase={phase} setPhase1={setPhase1} setPhase2={setPhase2}/>
+                    <Phases phase={phase} setPhase1={phase!==4 && setPhase1} setPhase2={phase!==4 && setPhase2}/>
                     <PhaseBody>   
                         {phRender}
                     </PhaseBody>                    
@@ -69,11 +69,12 @@ const PhaseHandler = styled.div`
 `
 
 const PhaseBall = styled.div`
-    height: 60px;
-    width: 60px;
-    border-radius: 32px;
+    height: 40px;
+    width: 40px;
+    border-radius: 21px;
     border: 3px solid ${colors.themeSuccess};
     background-color: ${props => props.bg};
+    cursor: ${props => props.bg ? "pointer" : "" };
 `
 
 const BookingContainer = styled.div`
