@@ -28,9 +28,16 @@ export default class SeatSelection extends Component {
 	};
 
 	selectSeat = (seat) => {
+        seat = Number(seat)
 		console.log(seat);
-		let payload = [...this.state.seatsSelect];
-		payload.push(Number(seat));
+        let payload = [...this.state.seatsSelect];
+        const index = payload.indexOf(seat);
+        if (index > -1) {
+            payload.splice(index, 1);
+        }
+        else{
+            payload.push(seat);
+        }
 		this.setState({ seatsSelect: payload });
 	};
 
@@ -97,7 +104,11 @@ const Button = styled.button`
 
 	&:active {
 		background-color: red;
-	}
+    }
+    
+    &:hover {
+        color: white;
+    }
 `;
 
 const SeatRow = styled.div`
