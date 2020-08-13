@@ -54,7 +54,7 @@ class SummaryPage extends React.Component {
 					<div className="textSecondary">Amount Payable (inc. GST)</div>
 					<div className="textLarge3 textDark">₹ {Math.round(price + (price*0.18))}</div>
 				</div>
-				<div className="button textCenter textLarge3 textB1" onClick={() => this.context.dataChange4()}>Pay Now</div>
+				<div className="button textCenter textLarge3 textB1" onClick={() => this.context.dataChange4()} style={{cursor: "pointer"}} >Pay Now</div>
 			</StyledTicket>
 		);
 	}
