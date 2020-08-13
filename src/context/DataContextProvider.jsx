@@ -29,6 +29,10 @@ export default class DataContextProvider extends React.Component{
         this.slots = new SlotData()
     }
 
+    dataChange3 = (seatSelect) => {
+        this.setState({seatSelect, phase: 3})
+    }
+
     dataChange2 = (slotSelect) => {
         let slotDetails = this.slots.getSlotsByID(Number(slotSelect))
         this.setState({slotSelect, phase : 2, slotDetails}, () => console.log(this.state))
@@ -85,7 +89,7 @@ export default class DataContextProvider extends React.Component{
     render(){
         const value = {...this.state, filterMovies: this.returnFilter(), updateFilter: this.updateFilter, 
                         dataChange: this.dataChange, destructureDate: this.destructureDate, changeDate: this.changeDate,
-                        dataChange2: this.dataChange2}
+                        dataChange2: this.dataChange2, dataChange3: this.dataChange3}
         return(
             <DataContext.Provider value={value}>
                 {this.props.children}
