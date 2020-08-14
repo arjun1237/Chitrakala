@@ -72,7 +72,7 @@ export default class DateTimeSelection extends Component {
 							))}
 					</div>
 					<div className={styles.otherinfo}>
-						<div>{this.context.language}</div>
+						{/* <div>{this.context.language}</div> */}
 						{/* <div>{this.context.location}</div> */}
 						<div>
 							<select value={this.context.location} onChange={this.context.locationChange}>

@@ -46,8 +46,8 @@ export default class DataContextProvider extends React.Component {
 	};
 
 	setLocation = async () => {
-		// let location = await getLocation()
-		this.setState({ location: "Bengaluru" });
+		let location = await getLocation()
+		this.setState({ location });
 	};
 
 	dataChange4 = (popcorn) => {
