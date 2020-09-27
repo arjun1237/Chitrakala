@@ -1,68 +1,72 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Chitrakala - Ticket Booking React app
 
-## Available Scripts
+> A react ticket booking application which let users to book ticket based on date, location and time at there ease.
 
-In the project directory, you can run:
 
-### `npm start`
+## Built With
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React js
+- Styled Components
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+**Just fork it and fell free to use it.**
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get a local copy up and running follow these simple example steps.
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1 Install Node js in your local system
+2 Code Editor
+3 Browser (optional)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Install
 
-### `npm run eject`
+After making a clone of this repo open your cmd/terminal and use
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`npm install` (this will install all the dependencies )
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Starting app
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Once everything has been installed, go to root folder. In the terminal type:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`npm start` (this will open localhost and start the app)
 
-## Learn More
+## Authors
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+👤 **Arjun K Prasad**
 
-### Code Splitting
+- Github: [@arjun1237](https://github.com/arjun1237/)
+- Hackerrank: [@arjun1237](https://www.hackerrank.com/arjun1237)
+- Linkedin: [@arjun1237](https://www.linkedin.com/in/arjun1237/)
+- Email: (arjun1237.kp@gmail.com)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+👤 **Keshav Mahawar**
 
-### Analyzing the Bundle Size
+- Github: [@KeshavMahawar](https://github.com/KeshavMahawar)
+- Twitter: [@kesmahawar](https://twitter.com/kesmahawar)
+- Linkedin: [Keshav Mahawar](https://www.linkedin.com/in/keshav-m-191a8b131)
+- Email: (kes.mahawar@gmail.com)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+## 🤝 Contributing
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Contributions, issues and feature requests are welcome!
 
-### Advanced Configuration
+Feel free to check the [issues page](https://github.com/arjun1237/Chitrakala/issues).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Show your support
 
-### Deployment
+Give a ⭐️ if you like this project!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## Acknowledgments
 
-### `npm run build` fails to minify
+- Implemented Context Api and and basic concepts of react to build this application
+- Used local storage to store the data
+- Used GeoLocation Api to get user location
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.

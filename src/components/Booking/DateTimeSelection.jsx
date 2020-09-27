@@ -18,7 +18,7 @@ export default class DateTimeSelection extends Component {
 	};
 
 	getNext5days = () => {
-		let date = new Date();
+		let date = new Date(1600157191564);
 		let res = [];
 		for (let i = 0; i < 5; i++) {
 			let temp = new Date(date.setDate(date.getDate() + 1));
