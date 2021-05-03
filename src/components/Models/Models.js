@@ -57,22 +57,35 @@ export class Slots {
 	getAllSlotsBasedOnDateLocationMovie(date, location, movie_id) {
 		// return slots based on date - return from context API
 		let groupSlots = {};
+		// console.log(this.slotsDB)
 		this.slotsDB.forEach((slot) => {
 			const cinema = new Cinema().getCinemaByID(slot.cinema_id);
-			const slotDate = new Date(slot.date);
+			let today = new Date();
+			const slotDate = new Date(today.setDate(today.getDate() + slot.date + 1));
+			console.log(date, "1", this.destructureDate(slotDate), "here")
 			let checkLine =
 				cinema.location.toLowerCase() === location.toLowerCase() &&
 				slot.movie_id === movie_id &&
-				new Date(date).getTime() === slotDate.getTime();
+				date === this.destructureDate(slotDate)
 			if (checkLine) {
 				let payload = { id: slot.id, time: slot.time };
 				if (groupSlots[cinema.theatre]) groupSlots[cinema.theatre].push(payload);
 				else groupSlots[cinema.theatre] = [payload];
 			}
         });
-        //new Slots().getAllSlotsBasedOnDateLocationMovie('2020/08/14', "bangalore" ,2)
 
 		return groupSlots;
+	}
+
+
+	destructureDate(date){
+		let year = date.getFullYear();
+		let month = date.getMonth() + 1;
+		if (month <= 9) month = "0" + month;
+		let day = date.getDate();
+		if (day <= 9) day = "0" + day;
+		let dateSelect = year + "/" + month + "/" + day;
+		return dateSelect;
 	}
 
 	getAllSlotsOnAndAfterDate(date) {

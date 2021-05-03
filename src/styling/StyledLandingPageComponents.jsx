@@ -3,10 +3,11 @@ import color from "./theme";
 
 export const  StyledLandingPage = Styled.div`
     max-width: 1200px;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 10px auto;
     padding: 10px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     & > div{
         margin: 15px;
     }
@@ -16,6 +17,7 @@ export const StyledMovieCard = Styled.div`
     display:flex;
     flex-direction: column;
     .image{
+        width: 250px;
         height: 350px;
         background-position: center;
         background-size: contain;

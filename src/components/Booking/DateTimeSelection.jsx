@@ -18,7 +18,7 @@ export default class DateTimeSelection extends Component {
 	};
 
 	getNext5days = () => {
-		let date = new Date(1600157191564);
+		let date = new Date();
 		let res = [];
 		for (let i = 0; i < 5; i++) {
 			let temp = new Date(date.setDate(date.getDate() + 1));
@@ -51,6 +51,7 @@ export default class DateTimeSelection extends Component {
 	};
 
 	render() {
+		console.log(this.context);
 		let payload = this.context.slotDisplay;
 		let theatres = this.getDetails();
 		let dSelect = this.context.dateSelect;
@@ -87,12 +88,12 @@ export default class DateTimeSelection extends Component {
 
 				<div className={styles.info}>
 					{theatres &&
-						theatres.map((x) => (
+						theatres.map((theatre) => (
 							<div key={uuidv4()} 
 								className={styles.nametime}>
-								<div className={styles.theatre}>Theatre {x}</div>
+								<div className={styles.theatre}>Theatre {theatre}</div>
 								<div className={styles.timeHandle}>
-									{payload[x].map((y) => (
+									{payload[theatre].map((y) => (
 										<div
 											className={styles.time}
 											onClick={() => this.context.dataChange2(y.id)}

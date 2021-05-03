@@ -79,6 +79,7 @@ export default class DataContextProvider extends React.Component {
 			this.state.location,
 			movieSelect
 		);
+		console.log(dateSelect, slotDisplay);
 		this.setState({ phase: 1, movieSelect, dateSelect, slotDisplay }, () =>
 			console.log(this.state)
 		);
