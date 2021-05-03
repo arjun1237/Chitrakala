@@ -18,6 +18,7 @@ export default class Booking extends Component{
                     break;
             case 4: phRender = <ConfirmationPage/> 
                     break;
+            default: break
         }
         return(
             <BookingContainer>

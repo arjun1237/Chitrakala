@@ -28,7 +28,7 @@ export class Movies {
 		return query;
 	}
 	getMovieById(id) {
-		return this.moviesDB.find((movie) => movie.id == id);
+		return this.moviesDB.find((movie) => movie.id === id);
 	}
 
 	inistialUpdateToAPI() {
@@ -127,7 +127,7 @@ export class Cinema {
 	}
 
 	getCinemaByID(id) {
-		return this.cinemasDB.find((cinema) => cinema.id == id);
+		return this.cinemasDB.find((cinema) => cinema.id === id);
 	}
 }
 

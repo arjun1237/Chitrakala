@@ -44,6 +44,7 @@ export default class DateTimeSelection extends Component {
 				return "SAT";
 			case 0:
 				return "SUN";
+			default: break
 		}
 	};
 
