@@ -1,8 +1,8 @@
-import movie from "../../JSON/movie.json";
-import categories from "../../JSON/categories.json";
-import bookings from "../../JSON/booking.json";
-import cinemas from "../../JSON/cinema.json";
-import slots from "../../JSON/slot.json";
+import movie from "../../DATA/movie";
+import categories from "../../DATA/categories";
+import bookings from "../../DATA/booking";
+import cinemas from "../../DATA/cinema";
+import slots from "../../DATA/slot";
 
 export class Movies {
 	constructor() {

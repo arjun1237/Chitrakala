@@ -1,4 +1,4 @@
-[
+const booking = [
     {
         "id" : 1,
         "slot_id" : 1,
@@ -89,3 +89,5 @@
         "seats" : [23, 24, 25]
     }
 ]
+
+export default booking

@@ -1,4 +1,4 @@
-[
+const slots = [
     {
         "id" : 1,
         "movie_id" : 1,
@@ -1758,3 +1758,5 @@
         "seats_booked" : [3, 5, 6, 8, 23, 24, 25, 27, 34, 35, 36, 56, 57, 58]
     }
 ]
+
+export default slots

@@ -4,7 +4,7 @@ import {
 	Slots as SlotData,
 } from "../components/Models/Models";
 import { v4 as uuidv4 } from "uuid";
-import getLocation from "../components/Models/Locator";
+// import getLocation from "../components/Models/Locator";
 
 export const DataContext = React.createContext();
 
@@ -38,7 +38,8 @@ export default class DataContextProvider extends React.Component {
 	};
 
 	setLocation = async () => {
-		let location = await getLocation()
+		// let location = await getLocation()
+		let location = "Bengaluru"
 		this.setState({ location });
 	};
 

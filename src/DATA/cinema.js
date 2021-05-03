@@ -1,4 +1,4 @@
-[
+const cinemas =  [
     {
         "id" : 1,
         "location" : "bengaluru",
@@ -95,3 +95,5 @@
         "theatre" : 4
     }
 ]
+
+export default cinemas

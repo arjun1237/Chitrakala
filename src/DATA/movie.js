@@ -1,4 +1,4 @@
-[
+const movies = [
   {
     "id": 1,
     "title": "Gladiator",
@@ -71,7 +71,7 @@
     "id": 5,
     "title": "Dil Bechara",
     "language": "Hindi",
-    "image": "https://lh3.googleusercontent.com/proxy/aGzQk1qLFFDcVPjuI_erDLEO9zk5he4MaK4ozsjTRfycagssp2Uo59nmIxFHHr-kHT-mZJp6ixbaav1LTNIElblVIqyOISd1x5o9Mu5KNXuY6piMkvP-cNWdSeB-",
+    "image": "https://m.media-amazon.com/images/M/MV5BNmI0MTliMTAtMmJhNC00NTJmLTllMzQtMDI3NzA1ODMyZWI1XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "director": "Mukesh Chhabra",
     "cast": ["Sushant", "Sanjana"],
@@ -170,3 +170,5 @@
     "rating": [2, 3, 4, 5, 5]
   }
 ]
+
+export default movies
