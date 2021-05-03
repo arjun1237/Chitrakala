@@ -3,9 +3,6 @@ import { StyledTicket } from "../../styling/StyledComponents";
 import {DataContext} from '../../context/DataContextProvider'
 
 class SummaryPage extends React.Component {
-	constructor(props) {
-		super(props);
-	}
 
 	handleChange = (e) => {
 		this.context.addPopcorn(e.target.checked)
@@ -38,7 +35,7 @@ class SummaryPage extends React.Component {
 					</div>
 					<div className="mtb flexEqual">
 						<div className="textSecondary">
-                            <img src="https://image.flaticon.com/icons/svg/2933/2933170.svg" width="40px"/>
+                            <img src="https://image.flaticon.com/icons/svg/2933/2933170.svg" width="40px" alt="" />
 						</div>
 						<div className="textDark">
 							<input type="checkbox" name="popcorn" onChange={this.handleChange}  />
@@ -55,7 +52,7 @@ class SummaryPage extends React.Component {
 					<div className="textSecondary">Amount Payable (inc. GST)</div>
 					<div className="textLarge3 textDark">₹ {Math.round(price + (price*0.18))}</div>
 				</div>
-				<div className="button textCenter textLarge3 textB1" onClick={() => this.context.dataChange4()} style={{cursor: "pointer"}} >Pay Now</div>
+				<div className="button textCenter textLarge3 textB1" onClick={this.context.dataChange4} style={{cursor: "pointer"}} >Pay Now</div>
 			</StyledTicket>
 		);
 	}

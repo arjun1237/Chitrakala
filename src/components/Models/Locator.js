@@ -5,6 +5,5 @@ export default async function getLocation(){
     let cityFetch = await fetch(`http://api.ipstack.com/${ipData.IPv4}?access_key=${keys.ipStack}&format=1`)
     let cityData = await cityFetch.json()
 
-    // console.log(ipData,cityData,cityData.city);
     return cityData.city
 }

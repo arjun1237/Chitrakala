@@ -57,12 +57,10 @@ export class Slots {
 	getAllSlotsBasedOnDateLocationMovie(date, location, movie_id) {
 		// return slots based on date - return from context API
 		let groupSlots = {};
-		// console.log(this.slotsDB)
 		this.slotsDB.forEach((slot) => {
 			const cinema = new Cinema().getCinemaByID(slot.cinema_id);
 			let today = new Date();
 			const slotDate = new Date(today.setDate(today.getDate() + slot.date + 1));
-			console.log(date, "1", this.destructureDate(slotDate), "here")
 			let checkLine =
 				cinema.location.toLowerCase() === location.toLowerCase() &&
 				slot.movie_id === movie_id &&

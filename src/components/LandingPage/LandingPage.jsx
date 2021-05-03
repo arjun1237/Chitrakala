@@ -1,13 +1,9 @@
 import React from "react";
 import MovieCard from "./MovieCard";
-import movieData from "../../JSON/movie.json"
 import { StyledLandingPage } from "../../styling/StyledLandingPageComponents";
 import {DataContext} from '../../context/DataContextProvider'
 
 class LandingPage extends React.Component {
-	constructor(props) {
-		super(props);
-	}
 
 	componentDidMount = () => {
 		this.context.setLocation()

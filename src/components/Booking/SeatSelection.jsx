@@ -29,7 +29,6 @@ export default class SeatSelection extends Component {
 
 	selectSeat = (seat) => {
         seat = Number(seat)
-		console.log(seat);
         let payload = [...this.state.seatsSelect];
         const index = payload.indexOf(seat);
         if (index > -1) {
@@ -44,7 +43,6 @@ export default class SeatSelection extends Component {
 	render() {
 		let { slotDetails } = this.context;
         let seatsBooked = slotDetails.seats_booked;
-        console.log(seatsBooked)
 		let seats = this.getSeats(seatsBooked);
 		let m = -1;
 		return (

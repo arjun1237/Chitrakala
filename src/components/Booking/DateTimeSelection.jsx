@@ -4,9 +4,6 @@ import { DataContext } from "../../context/DataContextProvider";
 import {v4 as uuidv4} from 'uuid'
 
 export default class DateTimeSelection extends Component {
-	constructor(props) {
-		super(props);
-	}
 
 	getDetails = () => {
 		let slots = this.context.slotDisplay;
@@ -51,7 +48,6 @@ export default class DateTimeSelection extends Component {
 	};
 
 	render() {
-		console.log(this.context);
 		let payload = this.context.slotDisplay;
 		let theatres = this.getDetails();
 		let dSelect = this.context.dateSelect;

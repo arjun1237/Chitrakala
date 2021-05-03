@@ -3,9 +3,6 @@ import { StyledTicket } from "../../styling/StyledComponents";
 import {DataContext} from '../../context/DataContextProvider'
 
 class ConfirmationPage extends React.Component {
-	constructor(props) {
-		super(props);
-	}
 
 	render() {
 		let {movies, movieSelect, dateSelect, timeSelect, seatSelect, popcorn, price, bookingID} = this.context

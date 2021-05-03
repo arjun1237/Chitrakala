@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
 	Movies as MovieData,
 	Slots as SlotData,
@@ -33,14 +33,6 @@ export default class DataContextProvider extends React.Component {
 		this.slots = new SlotData();
 	}
 
-	backToPhase2 = () => {
-		console.log("2");
-	};
-
-	backToPhase1 = () => {
-		console.log("1");
-	};
-
 	addPopcorn = (popcorn) => {
 		this.setState({ popcorn });
 	};
@@ -52,10 +44,12 @@ export default class DataContextProvider extends React.Component {
 
 	dataChange4 = (popcorn) => {
         let {slotSelect, seatSelect} = this.state
-        this.slots.modifySlotsAddBookedSeats( slotSelect, seatSelect)
-		this.setState({ popcorn, phase: 4, bookingID: uuidv4() }, () =>
-			console.log(this.state)
-		);
+        this.slots.modifySlotsAddBookedSeats(slotSelect, seatSelect)
+		this.setState({ 
+			popcorn, 
+			phase: 4, 
+			bookingID: uuidv4() 
+		});
 	};
 
 	dataChange3 = (seatSelect) => {
@@ -64,9 +58,11 @@ export default class DataContextProvider extends React.Component {
 
 	dataChange2 = (slotSelect) => {
 		let slotDetails = this.slots.getSlotsByID(Number(slotSelect));
-		this.setState({ slotSelect, phase: 2, slotDetails }, () =>
-			console.log(this.state)
-		);
+		this.setState({ 
+			slotSelect, 
+			phase: 2, 
+			slotDetails 
+		});
 	};
 
 	dataChange1 = (movieSelect) => {
@@ -79,10 +75,12 @@ export default class DataContextProvider extends React.Component {
 			this.state.location,
 			movieSelect
 		);
-		console.log(dateSelect, slotDisplay);
-		this.setState({ phase: 1, movieSelect, dateSelect, slotDisplay }, () =>
-			console.log(this.state)
-		);
+		this.setState({ 
+			phase: 1, 
+			movieSelect, 
+			dateSelect, 
+			slotDisplay 
+		});
 	};
 
 	setPhase0 = () => {
@@ -154,7 +152,7 @@ export default class DataContextProvider extends React.Component {
 		this.setState({ dateSelect, slotDisplay });
 	};
 
-	getSlots = (date) => {
+	getSlots = () => {
 		let slotDisplay = this.slots.getAllSlotsBasedOnDateLocationMovie(
 			this.state.dateSelect,
 			this.state.location,
@@ -164,7 +162,6 @@ export default class DataContextProvider extends React.Component {
 	};
 
 	returnFilter = () => {
-		console.log("here");
 		let filter = this.state.filterMovies.trim().toLowerCase();
 		if (filter.length > 0) {
 			return this.state.movies.filter((x) =>
@@ -198,10 +195,7 @@ export default class DataContextProvider extends React.Component {
 			setPhase0: this.setPhase0,
 			setPhase1: this.setPhase1,
 			setPhase2: this.setPhase2,
-			setPhase3: this.setPhase3,
 			addPopcorn: this.addPopcorn,
-			backToPhase1: this.backToPhase1,
-			backToPhase2: this.backToPhase2,
 			setLocation: this.setLocation,
 			locationChange: this.locationChange,
 		};

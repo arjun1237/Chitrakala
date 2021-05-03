@@ -3,8 +3,6 @@ import './App.css';
 import Navbar from './components/Navbar'
 import LandingPage from './components/LandingPage/LandingPage'
 import Booking from './components/Booking/Booking';
-import ConformationPage from './components/Booking/ConformationPage'
-import SummaryPage from './components/Booking/SummaryPage'
 import {DataContext} from './context/DataContextProvider'
 
 function App() {
